@@ -1,0 +1,31 @@
+불확실성 편차 - 
+
+최종적인 목표 : 분포가 다양해야됨.
+--> 어떻게 반영할 것인가?
+--> 분포가 다양하다 : EV 접속시간 기준 point 분포가 형성됨.
+(ex. 3시, 5시 접속하는 동일 차량이라도 duration과 capacity등 파라미터가 다 다름)
+
+
+
+
+
+
+
+
+EVSE_num = 12x3 행렬
+1: state 
+12 : configuration
+
+피드백 ----------------
+
+카운트랑 이항분포 --> recovery time이 필요함
+
+카운트 : 데이터 돌리는거임
+--> 문제가 발생할 수 있음 : 카운트의 시간 단위가 바뀌면
+recovery time도 같이 영향을 받아서 recovery time에 대해 자체를 수정해야되는 문제가 발생함.
+
+ans) recovery time 앞에 계산을 추가로 해서 카운트랑 연계해도 될듯
+
+ans) 데이터 개수에 따라 시간을 계산하도록 함. --> 이것도 생각해봐야됨.
+
+the model referenced by it contains blocks that updates persistent or state variables while computing outputs and is not supported in an algebraic loop. The parent System is in an algebraic loop with the follwing blocks
